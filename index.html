@@ -21,7 +21,7 @@
     <header class="header">
         <div class="header__container container">
             <div class="header__logo">
-                <img src="img/logo.svg" alt="logo">
+                <img src="img/logo.svg" alt="logo" class="header__logo-img">
             </div>
         </div>
     </header>
@@ -42,12 +42,12 @@
                         по&nbsp;шахматам
                     </p>
                     <div class="hero__button-container hero__button-container--big">
-                        <button class="hero__button btn-reset button-dark">
+                        <a href="#information" class="hero__button btn-reset button-dark">
                             Поддержать <br class="hero__line-breaker" /> шахматную мысль
-                        </button>
-                        <button class="hero__button btn-reset button-light hero__button--white">
+                        </a>
+                        <a href="#schedule" class="hero__button btn-reset button-light hero__button--white">
                             Подробнее <br class="hero__line-breaker" /> о турнире
-                        </button>
+                        </a>
                     </div>
 
 
@@ -56,20 +56,51 @@
         </section>
         <section class="ticker">
 
-            <marquee class="ticker__list" behavior="scroll">
+            <div class="ticker__list marquee">
+                <span class="ticker__item">
+                    &bull;
+                </span>
                 <span class="ticker__item">
                     Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!
+                </span>
+                <span class="ticker__item">
+                    &bull; 
                 </span>
                 <span class="ticker__item">
                     Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!
                 </span>
                 <span class="ticker__item">
+                    &bull;
+                </span>
+                <span class="ticker__item">
                     Лед тронулся, господа присяжные заседатели!
                 </span>
-            </marquee>
+                
+            </div>
+            <div aria-hidden="true" class="ticker__list marquee">
+                <span class="ticker__item">
+                    &bull;
+                </span>
+                <span class="ticker__item">
+                    Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!
+                </span>
+                <span class="ticker__item">
+                    &bull; 
+                </span>
+                <span class="ticker__item">
+                    Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!
+                </span>
+                <span class="ticker__item">
+                    &bull;
+                </span>
+                <span class="ticker__item">
+                    Лед тронулся, господа присяжные заседатели!
+                </span>
+                
+            </div>
 
         </section>
-        <section class="information">
+        <section class="information" id="information">
             <div class="container information__container">
                 <p class="information__text information__text--big-resolution">
                     Чтобы поддержать <br> Международный васюкинский турнир посетите лекцию на&nbsp;тему: <span
@@ -79,7 +110,7 @@
                 <p class="information__text information__text--small-resolution">
                     Чтобы поддержать Международный васюкинский турнир
                 </p>
-                <img src="img/information.jpg" alt="people">
+                <img src="img/information.jpg" alt="people" class="information__img">
                 <p class="information__text information__text--small-resolution">
                     посетите лекцию на&nbsp;тему: <span class="red-text"> &laquo;Плодотворная дебютная идея&raquo;
                     </span>
@@ -89,10 +120,14 @@
         <section class="schedule">
             <div class="container schedule__container">
                 <div class="schedule__wrapper">
-                    <img src="img/schedule.png" alt="gamer" class="schedule__img">
+                    <picture class="schedule__img">
+                        <source srcset="  img/schedule.png" media="(min-width: 480px)" />
+                        <img src="img/schedule-375.png" alt="gamer" />
+                      </picture>
+                    <!-- <img src="img/schedule.png" alt="gamer" class="schedule__img"> -->
                 </div>
 
-                <p class="schedule__text">
+                <p class="schedule__text" id="schedule">
                     и&nbsp;Сеанс <span class="red-text">одновременной игры в&nbsp;шахматы на&nbsp;160 досках</span>
                     гроссмейстера О.&nbsp;Бендера
                 </p>
@@ -127,7 +162,10 @@
                         Плата за игру:
                     </div>
                     <div class="table__column table__column--right">
-                        20&nbsp;коп.
+                        <span class="table__text">
+                            50&nbsp;коп.
+                        </span>
+                        
                     </div>
 
 
@@ -140,7 +178,7 @@
 
 
                 </div>
-                <a href="#" class="schedule__link">
+                <a href="#" class="schedule__link link-decoration ">
                     По&nbsp;всем вопросам обращаться в&nbsp;администрацию к&nbsp;К.&nbsp;Михельсону
                 </a>
             </div>
@@ -150,7 +188,7 @@
             <div class="stages__container container">
                 <h2 class="stages__subtitle">
                     Этапы преображения Васюков
-                    <a href="#" class="stages__link">
+                    <a href="#" class="stages__link link-decoration">
                         Будущие источники обогащения васюкинцев
                     </a>
                 </h2>
@@ -204,34 +242,137 @@
                     </div>
                 </div>
                 <!-- Карусель -->
-                <div class="single-slide-carousel">
-                    <div class="single-slide-carousel-window">
-                        <div class="single-slide-carousel-slides">
-                            <div class="single-slide-carousel-item">...</div>
-                            <div class="single-slide-carousel-item">...</div>
-                            <div class="single-slide-carousel-item">...</div>
+                <div class="steps-carousel">
+                    <div class="steps-carousel-window">
+                        <div class="steps-carousel-slides">
+
+
+                            <div class="steps-carousel-item stages__carousel-item unit">
+                                <span class="unit__decoration">
+
+                                </span>
+                                <div class="unit__box">
+                                    <div class="unit__item">
+                                        <span class="unit__digit">
+                                            1
+                                        </span>
+                                        <p class="unit__descr">
+                                            Строительство железнодорожной магистрали Москва-Васюки
+                                        </p>
+                                    </div>
+                                    <div class="unit__item">
+                                        <span class="unit__digit">
+                                            2
+                                        </span>
+
+                                        <p class="unit__descr">
+                                            Открытие фешенебельной гостиницы &laquo;Проходная пешка&raquo; и&nbsp;других
+                                            небоскрёбов
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+
+                            <div class="steps-carousel-item stages__carousel-item unit">
+                                <div class="unit__box">
+                                    <div class="unit__item">
+                                        <span class="unit__digit">
+                                            3
+                                        </span>
+                                        <p class="unit__descr">
+                                            Поднятие сельского хозяйства в&nbsp;радиусе на&nbsp;тысячу километров:
+                                            производство овощей, фруктов, икры, шоколадных конфет
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="steps-carousel-item stages__carousel-item unit">
+                                <div class="unit__box">
+                                    <div class="unit__item">
+                                        <span class="unit__digit">
+                                            4
+                                        </span>
+                                        <p class="unit__descr">
+                                            Строительство дворца для турнира
+                                        </p>
+                                    </div>
+                                    <div class="unit__item">
+                                        <span class="unit__digit">
+                                            5
+                                        </span>
+
+                                        <p class="unit__descr">
+                                            Размещение гаражей для гостевого автотранспорта
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="steps-carousel-item stages__carousel-item unit">
+                                <div class="unit__box">
+                                    <div class="unit__item">
+                                        <span class="unit__digit">
+                                            6
+                                        </span>
+                                        <p class="unit__descr">
+                                            Постройка сверхмощной радиостанции для передачи всему миру сенсационных
+                                            результатов
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="steps-carousel-item stages__carousel-item unit">
+                                <div class="unit__box">
+                                    <div class="unit__item">
+                                        <span class="unit__digit">
+                                            7
+                                        </span>
+                                        <p class="unit__descr">
+                                            Создание аэропорта &laquo;Большие Васюки&raquo; с&nbsp;регулярным
+                                            отправлением почтовых самолётов и&nbsp;дирижаблей во&nbsp;все концы света,
+                                            включая Лос-Анжелос и&nbsp;Мельбурн
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
-                    <div class="single-slide-controlls">
-                        <button class="btn-reset swiper__prev button-dark swiper__button single-slide-carousel-prev">
-                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.5382 18.4614L2.07666 9.99989L10.5382 1.53835" stroke="white"
-                                    stroke-width="2" stroke-linecap="square" />
+                    <div class="steps-controlls">
+                        <button class="btn-reset steps__prev button-dark steps__button steps-carousel-prev"
+                            id="steps-carousel-prev">
+                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5382 18.4614L2.07666 9.99989L10.5382 1.53835" stroke="white" stroke-width="2"
+                                    stroke-linecap="square" />
                             </svg>
-
+    
                         </button>
-
-                        <button class="btn-reset swiper__next button-dark swiper__button single-slide-carousel-next">
-                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+    
+                        <button class="btn-reset steps__next button-dark steps__button steps-carousel-next"
+                            id="steps-carousel-next">
+                            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.4618 1.53845L9.92334 9.99999L1.4618 18.4615" stroke="white" stroke-width="2"
                                     stroke-linecap="square" />
                             </svg>
                         </button>
                     </div>
-                    
+
                 </div>
+                
+
+
+
             </div>
         </section>
         <section class="participants">
@@ -240,10 +381,12 @@
                     Участники турнира
                 </h2>
 
-                <div class="participants__swiper swiper carousel">
+                <!-- Большая карусель -->
+
+                <div class="participants__swiper swiper participants-big-carousel">
                     <div class="swiper__controll-line">
                         <div class="swiper__controlls">
-                            <button class="btn-reset swiper__prev button-dark swiper__button carousel-prev"
+                            <button class="btn-reset swiper__prev button-dark swiper__button participants-big-carousel-prev"
                                 id="btnPrev">
                                 <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -257,7 +400,7 @@
                                 /
                                 <span class="display__all" id="totalFrames">3</span>
                             </span>
-                            <button class="btn-reset swiper__next button-dark swiper__button carousel-next"
+                            <button class="btn-reset swiper__next button-dark swiper__button participants-big-carousel-next"
                                 id="btnNext">
                                 <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -267,9 +410,9 @@
                             </button>
                         </div>
                     </div>
-                    <div class="swipper__slider-container carousel-window">
-                        <div class="swipper__slider-track carousel-slides">
-                            <div class="slide slide-1 carousel-item">
+                    <div class="swipper__slider-container participants-big-carousel-window">
+                        <div class="swipper__slider-track participants-big-carousel-slides">
+                            <div class="slide slide-1 participants-big-carousel-item">
                                 <img src="img/slide-plug.jpg" alt="slide image" class="slide__image">
                                 <div class="slide__text">
                                     <h3 class="slide__subtitle">
@@ -283,7 +426,7 @@
                                     Подробнее
                                 </button>
                             </div>
-                            <div class="slide slide-2 carousel-item">
+                            <div class="slide slide-2 participants-big-carousel-item">
                                 <img src="img/slide-plug.jpg" alt="slide image" class="slide__image">
                                 <div class="slide__text">
                                     <h3 class="slide__subtitle">
@@ -297,7 +440,7 @@
                                     Подробнее
                                 </button>
                             </div>
-                            <div class="slide slide-3 carousel-item">
+                            <div class="slide slide-3 participants-big-carousel-item">
                                 <img src="img/slide-plug.jpg" alt="slide image" class="slide__image">
                                 <div class="slide__text">
                                     <h3 class="slide__subtitle">
@@ -311,7 +454,7 @@
                                     Подробнее
                                 </button>
                             </div>
-                            <div class="slide slide-4 carousel-item">
+                            <div class="slide slide-4 participants-big-carousel-item">
                                 <img src="img/slide-plug.jpg" alt="slide image" class="slide__image">
                                 <div class="slide__text">
                                     <h3 class="slide__subtitle">
@@ -325,7 +468,7 @@
                                     Подробнее
                                 </button>
                             </div>
-                            <div class="slide slide-5 carousel-item">
+                            <div class="slide slide-5 participants-big-carousel-item">
                                 <img src="img/slide-plug.jpg" alt="slide image" class="slide__image">
                                 <div class="slide__text">
                                     <h3 class="slide__subtitle">
@@ -339,8 +482,127 @@
                                     Подробнее
                                 </button>
                             </div>
-                            <div class="slide slide-6 carousel-item">
+                            <div class="slide slide-6 participants-big-carousel-item">
                                 <img src="img/slide-plug.jpg" alt="slide image" class="slide__image">
+                                <div class="slide__text">
+                                    <h3 class="slide__subtitle">
+                                        Остап Бендер
+                                    </h3>
+                                    <span class="slide__descr">
+                                        Гроссмейстер
+                                    </span>
+                                </div>
+                                <button class="slide__button btn-reset">
+                                    Подробнее
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Маленькая карусель -->
+
+                <div class="participants__swiper swiper participants-small-carousel">
+                    <div class="swiper__controll-line">
+                        <div class="swiper__controlls">
+                            <button class="btn-reset swiper__prev button-dark swiper__button participants-small-carousel-prev"
+                                >
+                                <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5382 18.4614L2.07666 9.99989L10.5382 1.53835" stroke="white"
+                                        stroke-width="2" stroke-linecap="square" />
+                                </svg>
+
+                            </button>
+                            <span class="swiper__display display">
+                                <span class="display__current" id="currentFrameSmall">1</span>
+                                /
+                                <span class="display__all" id="totalFramesSmall">3</span>
+                            </span>
+                            <button class="btn-reset swiper__next button-dark swiper__button participants-small-carousel-next"
+                                >
+                                <svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.4618 1.53845L9.92334 9.99999L1.4618 18.4615" stroke="white"
+                                        stroke-width="2" stroke-linecap="square" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swipper__slider-container participants-small-carousel-window">
+                        <div class="swipper__slider-track participants-small-carousel-slides">
+                            <div class="slide slide-1 participants-small-carousel-item">
+                                <img src="img/slide-plug-small.jpg" alt="slide image" class="slide__image">
+                                <div class="slide__text">
+                                    <h3 class="slide__subtitle">
+                                        Хозе-Рауль Капабланка
+                                    </h3>
+                                    <span class="slide__descr">
+                                        Чемпион мира по шахматам
+                                    </span>
+                                </div>
+                                <button class="slide__button btn-reset">
+                                    Подробнее
+                                </button>
+                            </div>
+                            <div class="slide slide-2 participants-small-carousel-item">
+                                <img src="img/slide-plug-small.jpg" alt="slide image" class="slide__image">
+                                <div class="slide__text">
+                                    <h3 class="slide__subtitle">
+                                        Эммануил Ласкер
+                                    </h3>
+                                    <span class="slide__descr">
+                                        Чемпион мира по шахматам
+                                    </span>
+                                </div>
+                                <button class="slide__button btn-reset">
+                                    Подробнее
+                                </button>
+                            </div>
+                            <div class="slide slide-3 participants-small-carousel-item">
+                                <img src="img/slide-plug-small.jpg" alt="slide image" class="slide__image">
+                                <div class="slide__text">
+                                    <h3 class="slide__subtitle">
+                                        Александр Алехин
+                                    </h3>
+                                    <span class="slide__descr">
+                                        Чемпион мира по шахматам
+                                    </span>
+                                </div>
+                                <button class="slide__button btn-reset">
+                                    Подробнее
+                                </button>
+                            </div>
+                            <div class="slide slide-4 participants-small-carousel-item">
+                                <img src="img/slide-plug-small.jpg" alt="slide image" class="slide__image">
+                                <div class="slide__text">
+                                    <h3 class="slide__subtitle">
+                                        Арон Нимцович
+                                    </h3>
+                                    <span class="slide__descr">
+                                        Чемпион мира по шахматам
+                                    </span>
+                                </div>
+                                <button class="slide__button btn-reset">
+                                    Подробнее
+                                </button>
+                            </div>
+                            <div class="slide slide-5 participants-small-carousel-item">
+                                <img src="img/slide-plug-small.jpg" alt="slide image" class="slide__image">
+                                <div class="slide__text">
+                                    <h3 class="slide__subtitle">
+                                        Рихард Рети
+                                    </h3>
+                                    <span class="slide__descr">
+                                        Чемпион мира по шахматам
+                                    </span>
+                                </div>
+                                <button class="slide__button btn-reset">
+                                    Подробнее
+                                </button>
+                            </div>
+                            <div class="slide slide-6 participants-small-carousel-item">
+                                <img src="img/slide-plug-small.jpg" alt="slide image" class="slide__image">
                                 <div class="slide__text">
                                     <h3 class="slide__subtitle">
                                         Остап Бендер
@@ -360,17 +622,48 @@
         </section>
         <section class="ticker ticker-bottom">
 
-            <marquee class="ticker__list" behavior="scroll">
+            <div class="ticker__list marquee">
+                <span class="ticker__item">
+                    &bull;
+                </span>
                 <span class="ticker__item">
                     Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!
+                </span>
+                <span class="ticker__item">
+                    &bull; 
                 </span>
                 <span class="ticker__item">
                     Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!
                 </span>
                 <span class="ticker__item">
+                    &bull;
+                </span>
+                <span class="ticker__item">
                     Лед тронулся, господа присяжные заседатели!
                 </span>
-            </marquee>
+                
+            </div>
+            <div aria-hidden="true" class="ticker__list marquee">
+                <span class="ticker__item">
+                    &bull;
+                </span>
+                <span class="ticker__item">
+                    Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!
+                </span>
+                <span class="ticker__item">
+                    &bull; 
+                </span>
+                <span class="ticker__item">
+                    Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!
+                </span>
+                <span class="ticker__item">
+                    &bull;
+                </span>
+                <span class="ticker__item">
+                    Лед тронулся, господа присяжные заседатели!
+                </span>
+                
+            </div>
 
         </section>
     </main>

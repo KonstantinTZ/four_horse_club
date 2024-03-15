@@ -1,6 +1,6 @@
-class Slider {
+class ParticipantsSmallSlider {
     constructor(slider, {autoplay = true, inFrame = 1, offset = 1} = {}) {
-        // элемент div.carousel
+        // элемент div.participants-small-carousel
         this.slider = slider;
         // кол-во элементов в одном кадре
         this.inFrame = inFrame;
@@ -8,7 +8,7 @@ class Slider {
         this.offset = offset;
 
         // все элементы слайдера
-        this.allItems = slider.querySelectorAll('.carousel-item');
+        this.allItems = slider.querySelectorAll('.participants-small-carousel-item');
         // сколько всего элементов
         this.itemCount = this.allItems.length;
 
@@ -20,11 +20,11 @@ class Slider {
         this.frameIndex = 0;
 
         // контейнер для элементов
-        this.wrapper = slider.querySelector('.carousel-slides');
+        this.wrapper = slider.querySelector('.participants-small-carousel-slides');
         // кнопка «вперед»
-        this.nextButton = slider.querySelector('.carousel-next');
+        this.nextButton = slider.querySelector('.participants-small-carousel-next');
         // кнопка «назад»
-        this.prevButton = slider.querySelector('.carousel-prev');
+        this.prevButton = slider.querySelector('.participants-small-carousel-prev');
 
         this.autoplay = autoplay; // включить автоматическую прокрутку?
         this.paused = null; // чтобы можно было выключать автопрокрутку
@@ -39,7 +39,7 @@ class Slider {
         this.dotButtons = this.dots(); // создать индикатор текущего кадра
         this.displayIndicators = this.display(this.frameIndex + 1)
         // если всего 10 элементов, то ширина одного элемента составляет 1/10
-        // ширины контейнера .carousel-slides, то есть 100/10 = 10%
+        // ширины контейнера .participants-small-carousel-slides, то есть 100/10 = 10%
         this.allItems.forEach(item => item.style.width = 100 / this.itemCount + '%');
         // ширина контейнера должна вмещать все элементы: если элементов 10,
         // в окне просмотра 3 элемента, тогда ширина контейнера равна ширине
@@ -125,7 +125,7 @@ class Slider {
     // создать индикатор текущего кадра
     dots() {
         const ol = document.createElement('ol');
-        ol.classList.add('carousel-indicators');
+        ol.classList.add('participants-small-carousel-indicators');
         const children = [];
         for (let i = 0; i < this.frameCount; i++) {
             let li = document.createElement('li');
@@ -139,10 +139,10 @@ class Slider {
 
     //показывает числа на индикаторе
     display (index) {
-        let currentFrame = document.getElementById('currentFrame')
+        let currentFrame = document.getElementById('currentFrameSmall')
         currentFrame.textContent = index
 
-        const totalFrames = document.getElementById('totalFrames')
+        const totalFrames = document.getElementById('totalFramesSmall')
         totalFrames.textContent = this.frameCount
     }
 
@@ -172,4 +172,4 @@ class Slider {
     }
 }
 
-export default Slider;
+export default ParticipantsSmallSlider;

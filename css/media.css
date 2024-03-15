@@ -23,7 +23,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .hero__section {
 
         background-size: auto;
@@ -33,6 +33,26 @@
 
     .information__container {
         flex-wrap: wrap;
+    }
+
+    .stages__list {
+
+        grid-template-columns: 100%;
+
+        grid-template-areas:
+            "A"
+            "B"
+            "C"
+            "D"
+            "E"
+            "F"
+            "G"
+
+        ;
+    }
+
+    .step__decoration {
+        display: none;
     }
 
     .schedule {
@@ -54,9 +74,9 @@
     .participants {
         margin-bottom: 10px;
     }
-}
+} */
 
-@media (max-width: 769px) {
+@media (max-width: 1024px) {
 
     .container {
         padding: 0 20px;
@@ -121,7 +141,7 @@
     .table__column--left {
         border-right: none;
         border-bottom: none;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
 
     .table__column--right {
@@ -167,6 +187,12 @@
         max-width: 300px;
     }
 
+    .participants-big-carousel{
+        display: block;
+    }
+
+    
+
     .footer__container {
         padding: 20px 40px;
     }
@@ -174,7 +200,7 @@
 
 }
 
-@media (max-width: 576px) {
+@media (max-width: 756px) {
 
     .hero__section {
         padding-top: 118px;
@@ -205,7 +231,7 @@
     }
 
     .schedule {
-        margin-bottom: 100px;
+        margin-bottom: 121px;;
     }
 
 
@@ -213,6 +239,14 @@
     .participants__container {
         position: relative;
         padding-bottom: 100px;
+    }
+
+    .participants-big-carousel{
+        display: none;
+    }
+
+    .participants-small-carousel{
+        display: block;
     }
 
     .carousel .carousel-window {
@@ -224,7 +258,8 @@
     }
 
     .swiper__controll-line {
-        margin: 0;
+        margin: 0 auto;
+        justify-content: center;
         position: absolute;
         justify-content: center;
         z-index: 1000;
@@ -232,18 +267,97 @@
         bottom: -70px;
     }
 
+    .swiper__button{
+        width: 36px;
+        height: 36px;
+    } 
+
+
+    .swipper__slider-track {
+        display: flex;
+        padding: 0px 0px;
+        gap: inherit;
+    }
+
+    
+    
+
+    .participants-small-carousel {
+        margin: 0 auto;
+        position: relative;
+    }
+        .participants-small-carousel .participants-small-carousel-indicators {
+        
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 15;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            list-style: none;
+        }
+            .participants-small-carousel .participants-small-carousel-indicators li {
+                display: none;
+            }
+
+        .participants-small-carousel .participants-small-carousel-window {
+            width: 100%;
+            height: 394px;
+            position: relative;
+            overflow: hidden;
+        }
+        .participants-small-carousel .participants-small-carousel-slides {
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s;
+        }
+        .participants-small-carousel .participants-small-carousel-item {
+            height: 98%;
+        }
+            .participants-small-carousel .participants-small-carousel-item img {
+                width: 244px;
+                height: 244px;
+                object-fit: cover;
+            }
+    
+        
+
 
 
 }
 
 @media (max-width: 480px) {
+
+    .header__logo {
+        padding-top: 18px;
+    }
+
+    .header__logo-img {
+
+        height: 32px;
+        width: 213px;
+    }
+
+    .hero__section {
+        padding-top: 96px;
+        padding-bottom: 319px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position-y: -80%;
+    }
+
     .hero__title {
         font-size: 36px;
+        margin-bottom: 24px;
     }
 
     .title__text--center {
         font-size: 36px;
     }
+
+
 
     .hero__descr {
         font-family: Golos Text;
@@ -253,24 +367,49 @@
         letter-spacing: 0px;
         text-align: left;
 
-        margin-bottom: 41px;
+        margin-bottom: 30px;
     }
 
     .ticker {
+        margin-top: -27px;
+        height: 38px;
+        padding: 8px 0;
         margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ticker__item {
+        font-family: Merriweather;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        text-align: right;
+
+    }
+
+    .information{
+        margin-bottom: 58px;
     }
 
     .information__text {
+    
         font-family: Merriweather;
         font-size: 28px;
         font-weight: 400;
         line-height: 38px;
         letter-spacing: 0px;
         text-align: left;
+    
 
     }
 
+    .information__img {
+        margin-top: 25px;
+    }
+
     .schedule__text {
+        margin-top: -148px;
         font-family: Merriweather;
         font-size: 28px;
         font-weight: 400;
@@ -289,6 +428,33 @@
 
     }
 
+    .schedule__img{
+        scale: 1.1;
+        position: static;
+    }
+
+    .schedule__table{
+        margin-bottom: 8px;
+    }
+
+    .table__column--right{
+        position: relative;
+    }
+    
+    .table__column:nth-child(8){
+        padding-bottom: 0;
+    }
+
+    .table__text{
+        position: absolute;
+        left: 153px;
+        top:-39px
+    }
+
+    .table-extra {
+        margin-right: 7px;
+    }
+
     .stages__subtitle {
         font-family: Merriweather;
         font-size: 36px;
@@ -296,7 +462,8 @@
         line-height: 40px;
         letter-spacing: 0px;
         text-align: left;
-
+        margin-bottom: 0;
+        /* padding-bottom: 150px  */
     }
 
 
@@ -311,16 +478,189 @@
     }
 
     .stages__subtitle .stages__link {
-        top: 145px;
+        top: 130px;
     }
 
     .stages {
-        margin-bottom: 80px;
+        margin-bottom: 119px;
     }
 
-    .stages__list{
+    .stages__list {
         display: none;
     }
+
+    .stages__carousel-item{
+        padding-top:147px ;
+        position: relative;
+    }
+
+    .unit__box {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        padding: 62px 20px;
+        gap: 28px;
+        background-image: url('../img/steps-texture.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .unit__item {
+        display: flex;
+        gap: 16px;
+    }
+
+    .unit__digit {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        color: var(--color-black-dark);
+        font-family: Golos Text;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0px;
+        padding-top: 5px;
+        text-align: center;
+
+    }
+
+    .unit__descr {
+        width: 243px;
+        font-family: Golos Text;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0px;
+        text-align: left;
+
+        
+    }
+
+    .unit__decoration{
+        position: absolute;
+        z-index: 2000;
+        background-image: url('../img/schedule-plain-small.png');
+        width: 350px;
+        height: 207px;
+        top: 6px;
+        left:9px;
+        
+
+    }
+
+
+    .steps-carousel {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .steps-carousel .steps-carousel-indicators {
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        list-style: none;
+    }
+
+    .steps-carousel .steps-carousel-indicators li {
+        flex: 0 1 auto;
+        width: 10px;
+        height: 10px;
+        margin-right: 3px;
+        margin-left: 3px;
+        cursor: pointer;
+        background-color: var(--color-grey-super-light);
+        border: 2px solid var(--color-grey-super-light);
+        border-radius: 50%;
+    }
+
+    .steps-carousel .steps-carousel-indicators .active {
+        background-color: var(--color-black-dark);
+        border-color:var(--color-black-dark) ;
+
+    }
+
+    .steps-carousel .steps-carousel-window {
+        width: 100%;
+        height: 476px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .steps-carousel .steps-carousel-slides {
+        height: 100%;
+        display: flex;
+        transition: transform 0.5s;
+    }
+
+    .steps-carousel .steps-carousel-item {
+        height: 100%;
+    }
+
+    .steps-carousel .steps-carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* .steps-carousel .steps-carousel-prev, .steps-carousel .steps-carousel-next {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 15%;
+            color: #fff;
+            opacity: 0.7;
+            text-align: center;
+            font-size: 40px;
+            text-decoration: none;
+        }
+        .steps-carousel .steps-carousel-prev:hover, .steps-carousel .steps-carousel-next:hover {
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .steps-carousel .steps-carousel-prev {
+            left: 0;
+        }
+        .steps-carousel .steps-carousel-next {
+            right: 0;
+        } */
+
+    .steps-controlls {
+        margin: 0 auto;
+        width: 178px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .steps__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 0;
+        width: 36px;
+        height: 36px;
+    }
+
+    .steps__button:disabled{
+        background-color: var(--color-grey-super-light);
+        border-color: var(--color-grey-super-light);
+    }
+
+
+
+
 
     .participants__subtitle {
         font-family: Merriweather;
@@ -333,7 +673,16 @@
 
     }
 
-    .ticker-bottom{
+    .participants {
+        margin-bottom: 70px;
+    }
+    
+
+    .ticker-bottom {
         margin: 0;
+    }
+
+    .footer__container {
+        padding: 41px 20px;
     }
 }
