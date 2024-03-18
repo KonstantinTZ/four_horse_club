@@ -365,7 +365,7 @@ body {
 .schedule__container {
     display: grid;
     grid-template-columns: 519px 1fr;
-    height: 528px;
+    min-height: 528px;
     
 }
 

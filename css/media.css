@@ -155,6 +155,7 @@
 
     .stages__subtitle {
         padding-bottom: 56px;
+        max-width: 702px;
     }
 
     .stages__subtitle .stages__link {
@@ -202,12 +203,17 @@
 
 @media (max-width: 756px) {
 
+
     .hero__section {
         padding-top: 118px;
         padding-bottom: 131px;
         background-image: url('../img/hero-320.jpeg');
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .hero__text{
+        max-width: inherit;
     }
 
 
@@ -343,9 +349,6 @@
     .hero__section {
         padding-top: 96px;
         padding-bottom: 319px;
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position-y: -80%;
     }
 
     .hero__title {
@@ -684,5 +687,13 @@
 
     .footer__container {
         padding: 41px 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero__section {
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position-y: -80%;
     }
 }
